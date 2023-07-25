@@ -18,13 +18,13 @@ try {
         echo $task_id;
         echo "<a href='/demo.php?task_id={$task_id}' target='_blank'>打开</a>";
         $response   = $midjourney->getImagine($task_id);
-        echo '结果集1：';
+        echo '结果集：';
         print_r($response);
     } else {
         $task_id= $_GET['task_id'];
         echo 'Task：'.$task_id;
         $response   = $midjourney->getImagine($task_id);
-        echo '结果集2：';
+        echo '结果集：';
         echo '<pre>';
         print_r($response);
         echo '</pre>';
